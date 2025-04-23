@@ -1,0 +1,583 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+a::after {
+    transition: transform 0.5s ease-in-out;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: sticky;
+    top: 0%;
+    background-image: url("../img/רקע\ סופי\ בעזרת\ ד.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#header {
+    z-index: 99;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    margin-right: 150px;
+    margin-top: 50px;
+}
+
+#header a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #7a4a34;
+    font-size: 18px;
+    padding: 7px 17px;
+}
+
+#about:hover,
+#donations:hover {
+    background-color: #7a4a34;
+    color: #f5e8d7;
+    border-radius: 20px;
+}
+
+#donations {
+    border: 1px solid #7a4a34;
+    border-radius: 20px;
+}
+
+#div_about {
+    z-index: 9999;
+    width: 90%;
+    height: 2300px;
+    background-color: #f5e8d7;
+    position: sticky;
+    top: 70px;
+    margin: auto;
+    filter: drop-shadow(0.30rem 0.30rem 0.30rem rgba(63, 61, 61, 0.5));
+    text-align: center;
+}
+
+#first_about {
+    width: 100%;
+    background-image: url("../img/רקע\ אודות.png");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+}
+
+#dolar {
+    width: 100px;
+    padding-top: 150px;
+    padding-bottom: 0%;
+    animation: rotate 2s infinite linear;
+}
+
+#donations_h1 {
+    margin-top: 0%;
+    font-size: 70px;
+    color: #f8f7f5;
+    margin-bottom: 0%;
+}
+
+#donations_h4 {
+    margin-top: 0%;
+    font-size: 18px;
+    color: #be976c;
+    font-weight: 300;
+    margin-bottom: 0%;
+}
+
+#btn_donations {
+    margin: auto;
+    margin-top: 3%;
+    font-size: 16px;
+    padding: 7px 30px;
+    background: #be976c;
+    color: #7a4a34;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s ease;
+    width: 100px;
+    height: 25px;
+    border-radius: 20px;
+}
+
+#btn_donations::before {
+    padding: 7px 0px;
+    content: 'אשרייך';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #c39945;
+    transition: left 0.4s ease;
+    z-index: 0;
+}
+
+#btn_donations:hover::before {
+    left: 0;
+}
+
+#btn_donations:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#about_h3 {
+    font-size: 45px;
+    padding-top: 30px;
+    color: #453126;
+}
+
+#about_p {
+    font-size: 16px;
+    color: #453126;
+    width: 50%;
+    margin: auto;
+}
+
+#donations_h3 {
+    top: 0px;
+    font-size: 45px;
+    padding-top: 30px;
+    color: #c39945;
+    font-weight: 700;
+}
+
+#type_donations {
+    width: 100%;
+    height: 300px;
+    background-image: url("/img/רקע\ אודות.png");
+    background-position: center;
+    background-size: cover;
+    z-index: 99999999;
+}
+
+#roll {
+    /* padding-top: 50px; */
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    margin: auto;
+
+}
+
+#roll div {
+    width: min-content;
+    display: inline-block;
+}
+
+#roll img {
+    margin-top: 50px;
+    width: 150px;
+    padding: 30px;
+    filter: drop-shadow(0.55rem 0.55rem 0.55rem rgba(63, 61, 61, 0.5));
+}
+
+#roll img:hover {
+    animation: rotate 1.5s;
+    cursor: pointer;
+}
+
+#roll h3 {
+    font-size: 18px;
+    position: absolute;
+    width: 150px;
+    padding: 30px;
+    display: inline-block;
+    font-weight: 300;
+    color: #be976c;
+}
+
+#roll_dinami {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    visibility: hidden;
+    background-image: url("/img/4851832.jpg");
+    background-position: center;
+    background-size: cover;
+    z-index: 9999999;
+    margin: auto;
+}
+
+.x {
+    position: absolute;
+    left: 5%;
+    font-size: 30px;
+    color: #453126;
+}
+
+.x:hover {
+    color: #be976c;
+    cursor: pointer;
+}
+
+#p_disap {
+    visibility: hidden;
+}
+
+.title {
+    font-size: 45px;
+    font-weight: 700;
+    padding-top: 10%;
+    color: #ebdcb5;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+}
+
+.p_about_shabes {
+    color: #ebdcb5;
+    font-size: 18px;
+    width: 40%;
+    margin: auto;
+    font-weight: 300;
+    padding-bottom: 4%;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+#roll_dinami .holyday {
+    padding: 7px 50px;
+}
+
+#roll_dinami button {
+    display: flex;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 16px;
+    padding: 7px 28px;
+    background-color: initial;
+    color: #7a4a34;
+    border: 1px solid #7a4a34;
+    background-color: #ebdcb5;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s ease;
+    width: 200px;
+    height: 35px;
+    border-radius: 20px;
+}
+
+.btn_seuda_3::before {
+    padding: 7px 0px;
+    content: '300$';
+    position: absolute;
+    top: 0;
+    left: -101%;
+    width: 200px;
+    height: 35px;
+    background: #c19450;
+    transition: left 0.4s ease;
+    z-index: 0;
+}
+
+.btn_seuda_1::before {
+    padding: 7px 0px;
+    content: '100$';
+    position: absolute;
+    top: 0;
+    left: -101%;
+    width: 200px;
+    height: 35px;
+    background: #c19450;
+    transition: left 0.4s ease;
+    z-index: 0;
+}
+
+
+.btn_seuda_2::before {
+    padding: 7px 0px;
+    content: '200$';
+    position: absolute;
+    top: 0;
+    left: -101%;
+    width: 200px;
+    height: 35px;
+    background: #c19450;
+    transition: left 0.4s ease;
+    z-index: 0;
+}
+
+.first_diraction::before {
+    padding: 7px 0px;
+    content: '15$';
+    position: absolute;
+    top: 0;
+    left: -101%;
+    width: 200px;
+    height: 35px;
+    background: #c19450;
+    transition: left 0.4s ease;
+    z-index: 0;
+}
+
+.second_direction::before {
+    padding: 7px 0px;
+    content: '30$';
+    position: absolute;
+    top: 0;
+    left: -101%;
+    width: 200px;
+    height: 35px;
+    background: #c19450;
+    transition: left 0.4s ease;
+    z-index: 0;
+}
+
+.holyday::before {
+    padding: 7px 0px;
+    content: 'holyday';
+    position: absolute;
+    top: 0;
+    left: -101%;
+    width: 200px;
+    height: 35px;
+    background: #c19450;
+    transition: left 0.4s ease;
+    z-index: 0;
+}
+
+#roll_dinami button:hover::before {
+    left: 0;
+}
+
+#roll_dinami button:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#miri {
+    height: 100px;
+    position: relative;
+    top: 10%;
+}
+
+/* עיצוב בסיסי */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    color: #7a4a34;
+}
+.modal-content input{
+    height: 45px;
+    border-radius: 25px;
+    background-color: #ffffff;
+    border: #b57557 solid 2px;
+    margin: 0.8%;
+    padding-left: 120px;
+}
+
+.modal-content button{
+    padding: 15px;
+    border-radius: 25px;
+    background-color: #be976c;
+    color: #ffffff;
+    font-size: larger;
+    width: 290px;
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    border: #453126 solid 2px;
+}
+
+.modal-content h2{
+    margin-top: 10%;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.title,
+.x,
+.btn_seuda_1,
+.btn_seuda_2,
+.btn_seuda_3 {
+    margin: 10px 0;
+}
+
+#adminSection {
+    display: none;
+    background-color: yellow;
+    height: 100px;
+    width: 100px;
+    position: relative;
+}
+
+#closeButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+/* עיצוב רספונסיבי לטאבלטים */
+@media screen and (max-width: 768px) {
+    #header {
+        justify-content: center;
+        padding: 15px;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    #header a {
+        margin-left: 10px;
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    #btn_donations {
+        font-size: 14px;
+        padding: 5px 20px;
+    }
+
+    #dolar {
+        padding-top: 50px;
+        width: 80px;
+    }
+
+    #about_p {
+        width: 70%;
+    }
+
+    #roll img {
+        width: 100px;
+        padding: 20px;
+    }
+
+    #roll h3 {
+        padding: 0px;
+    }
+
+    .title {
+        padding-top: 20%;
+    }
+
+    .p_about_shabes {
+        width: 90%;
+        padding-bottom: 10%;
+    }
+}
+
+/* עיצוב רספונסיבי למכשירים ניידים */
+@media screen and (max-width: 480px) {
+    #header {
+        justify-content: space-around;
+        padding: 50px;
+        /* margin-top: 60px; */
+        width: 50%;
+        margin: auto;
+    }
+
+    #first_about {
+        height: 600px;
+    }
+
+    #header a {
+        margin-left: 5px;
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    #btn_donations {
+        font-size: 12px;
+        padding: 5px 15px;
+    }
+
+    #dolar {
+        width: 60px;
+    }
+
+    #about_p {
+        width: 90%;
+    }
+
+    #roll img {
+        width: 70px;
+        padding: 20px;
+    }
+
+    #roll h3 {
+        padding: 0px;
+        margin: 0px;
+        width: 120px;
+    }
+
+    .title {
+        padding-top: 45%;
+    }
+
+    .p_about_shabes {
+        /* padding-top: 55%; */
+        width: 90%;
+        padding-bottom: 20%;
+    }
+
+}

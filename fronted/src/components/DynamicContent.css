@@ -1,0 +1,56 @@
+/* .dynamic-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(245, 232, 215, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .close-x {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 32px;
+    color: #7a4a34;
+    cursor: pointer;
+  }
+  
+  .dynamic-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #7a4a34;
+    margin-bottom: 20px;
+  }
+  
+  .dynamic-desc {
+    font-size: 18px;
+    color: #453126;
+    max-width: 500px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .dynamic-buttons button {
+    margin: 10px;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+    background-color: #be976c;
+    color: white;
+    font-weight: 500;
+    transition: background 0.3s;
+    cursor: pointer;
+  }
+  
+  .dynamic-buttons button:hover {
+    background-color: #c19450;
+  } */
